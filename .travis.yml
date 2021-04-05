@@ -14,6 +14,6 @@ script:
   mvn clean install
 
 after_success:
-  - docker build -t kernelpanic33/video-recording-server .
+  - docker build -t pioneerfromussr/video-recording-server .
   - echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
-  - docker push kernelpanic33/video-recording-server:latest
+  - docker push pioneerfromussr/video-recording-server:latest
